@@ -38,9 +38,6 @@ cross
 exec
 java
 
-# tools
-!addremote
-!delremote
 # insert above this line
 !GPATH
 !GRTAGS
@@ -88,4 +85,13 @@ info
 !.git.exclude.d
 .git.main.d
 !.diredls
+
+# tools
+!addremote
+!delremote
+!prj-info
+!diverges
+!delcommit
+
 .currun.*
+
