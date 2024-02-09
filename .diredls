@@ -38,7 +38,6 @@ cross
 exec
 java
 
-bldrun
 # insert above this line
 !GPATH
 !GRTAGS
@@ -63,11 +62,6 @@ bldrun
 !.mailmap
 !.clangd
 
-# if inst ie used src dir you got these
-configure
-configure.in
-!config.guess
-!config.sub
 # --
 !install-sh
 !INSTALL.BZR
@@ -82,10 +76,23 @@ info
 
 !.oribefbrk
 !.dummy
-.git
 !.git.exclude.d
 .git.main.d
 !.diredls
+
+bldrun
+# bld gen-ed files
+# if inst ie used src dir you got these
+!configure
+!configure.in
+!config.log
+!config.status
+!config.guess
+!config.sub
+!Makefile
+!aclocal.m4
+!native-lisp
+!.configure.done
 
 # tools
 !addremote
@@ -93,6 +100,8 @@ info
 !prj-info
 !diverges
 !delcommit
+inst
 
 .currun.*
 
+.git
