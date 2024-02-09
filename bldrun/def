@@ -1,0 +1,20 @@
+m4once(m4sedlns(
+updir*=*m4getdir(m4.prj.dir)
+dnl dt*=*m4curdt
+
+)
+)
+dnl Local Variables:
+dnl mode                         : m4
+dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
+dnl coding                       : iso-latin-1-unix
+dnl delete-trailing-whitespace   : t
+dnl delete-trailing-blank-lines  : t
+dnl comment-start                : "dnl "
+dnl eval                         : (m4bq 1)
+dnl eval: (setq post-save-enable nil)
+dnl eval: (setq post-save-cmdargs '("mfour 'm4postsave(%s, .currun.%s)(mfor=1)'" fa-curfile fa-curstem))
+dnl eval: (setq run-the-fileargs '(eval-sexp (fileargsn 1 "run" 2 'ignore)))
+dnl eval: (setq run-the-fileargs1 '(""))
+dnl eval: (setq run-the-fileargs2 '("[[ $(%s) = ':' ]]" fa-curfile))
+dnl End:

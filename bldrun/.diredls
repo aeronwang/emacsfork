@@ -1,0 +1,8 @@
+!def
+!cfg
+!cfgs
+
+# dirrun
+bld
+# insert above this line
+!m4

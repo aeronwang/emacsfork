@@ -1,0 +1,26 @@
+(let (selected)
+(setq selected (ioptions (list m4.core.each(m4dq($1), m4.core.dirfiles.bang(m4curdir/cfgs,.diredls)(rela=1))(m4d(sep, ))) nil nil "select cfg(prj: m4.prj.nm): "))
+(cmdln "sed -i '/cfg selector/s|m4inc(.*)|m4inc(m4curdirfull/cfgs/%s)|' %s" selected "m4curdir/m4")
+
+dnl todo: once selected, .diredls also can hide others
+
+(message "well done")
+)
+
+dnl vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+dnl ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dnl Local Variables:
+dnl mode: m4
+dnl eval: (hack-dir-local-variables-after-change-major-mode)
+dnl coding: iso-latin-1-unix
+dnl delete-trailing-whitespace: t
+dnl delete-trailing-blank-lines: t
+dnl eval: (setq comment-start "dnl ")
+dnl eval: (m4bq 1)
+dnl eval: (setq run-the-fileargs '(eval-sexp (fileargsn :1 "run")))
+dnl eval: (setq run-the-fileargs0 '("m4 m4 %s" fa-curfile))
+dnl eval: (setq run-the-fileargs1 '(eval-sexp (eloadsm4 fa-curfile) (setq facfg-notab t facfg-noshow t)))
+dnl End:
+m4comment(
+
+)dnl

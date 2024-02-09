@@ -38,6 +38,7 @@ cross
 exec
 java
 
+bldrun
 # insert above this line
 !GPATH
 !GRTAGS

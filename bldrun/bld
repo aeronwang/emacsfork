@@ -1,0 +1,49 @@
+m4def(m4cfgopts,dnl
+--prefix m4up.updir/inst dnl
+CFLAGS='-g3 -O0' dnl
+CPPFLAGS='-g3 -O0' dnl
+--program-suffix= dnl
+--with-native-compilation=aot --with-tree-sitter --with-json dnl
+--with-x-toolkit=no dnl
+dnl --without-xpm dnl
+dnl --without-jpeg dnl
+dnl --without-tiff dnl
+dnl --without-gif dnl
+dnl --with-png dnl
+dnl --without-sound dnl
+--without-rsvg dnl
+--without-xaw3d dnl
+--without-x dnl
+)
+
+m4ub.timetaken(bld and inst,
+m4ub.cmdlns(
+cd m4up.updir
+
+dnl autogen, run config, then bld, that's it
+dnl you del these 2 guard files will trigger/force rerun of autogen or configure
+m4ub.ise(./configure) || ./autogen.sh
+m4ub.ise(./.configure.done) || ./configure m4cfgopts
+touch ./.configure.done
+make -j$(nproc)
+make -j$(nproc) install
+)
+)
+dnl Local Variables:
+dnl mode                         : m4
+dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
+dnl coding                       : iso-latin-1-unix
+dnl delete-trailing-whitespace   : t
+dnl delete-trailing-blank-lines  : t
+dnl comment-start                : "dnl "
+dnl eval                         : (m4bq 1)
+dnl eval: (setq post-save-enable nil)
+dnl eval: (setq post-save-cmdargs '("mfour 'm4postsave(%s, .currun.%s)(mfor=1)'" fa-curfile fa-curstem))
+dnl eval: (setq run-the-fileargs  '(eval-sexp (fileargsn 0 "gen" :1 "run" 2 "test" 3 "debug all" 4 "debug fns eg m4def")))
+dnl eval: (setq run-the-fileargsu '(eval-sexp (fileargsn 0 "gen"  1 "run" 2 "test" 3 "debug all" 4 "debug fns eg m4def")))
+dnl eval: (setq run-the-fileargs0 '("m4 m4 <(echo -n 'm4funcfg(bash.cmd,chkerr=)m4funcfg(bash.run,chkerr=)') %s" fa-curfile))
+dnl eval: (setq run-the-fileargs1 '("currun %s" fa-curfile))
+dnl eval: (setq run-the-fileargs2 '("diff %s.expected <(runfa1 %s 2>&1) && echo PASS || ! echo FAIL" fa-curfile fa-curfile))
+dnl eval: (setq run-the-fileargs3 '("m4 -daeq m4 <(echo m4traceon) %s" fa-curfile))
+dnl eval: (setq run-the-fileargs5 '("m4 -daeq m4 -t m4def -t m4d %s" fa-curfile))
+dnl End:

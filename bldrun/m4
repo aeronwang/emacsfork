@@ -1,0 +1,16 @@
+include(/home/enswan/m4/m4)dnl
+m4no(
+m4def(m4.prj.dir, m4curdirfollow)
+m4inc(m4.prj.dir/def)
+m4sinc(m4curdir/def)
+m4ignore(cfg selector)m4inc()
+)dnl
+dnl Local Variables:
+dnl mode                         : m4
+dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
+dnl coding                       : iso-latin-1-unix
+dnl delete-trailing-whitespace   : t
+dnl delete-trailing-blank-lines  : t
+dnl comment-start                : "dnl "
+dnl eval                         : (m4bq 1)
+dnl End:
