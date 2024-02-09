@@ -84,7 +84,7 @@ info
 
 !.oribefbrk
 !.dummy
-!.git
+.git
 !.git.exclude.d
 .git.main.d
 !.diredls
