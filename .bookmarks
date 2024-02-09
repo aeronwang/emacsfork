@@ -1,0 +1,27 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("cedet.el"
+ (filename . "lisp/cedet/cedet.el")
+ (front-context-string . ";;; cedet.el ---")
+ (rear-context-string)
+ (position . 1))
+("semantic.el"
+ (filename . "lisp/cedet/semantic.el")
+ (front-context-string . ", 2010, 2011, 20")
+ (rear-context-string . "
+;;   2008, 2009")
+ (position . 135))
+("startup.el"
+ (filename . "lisp/startup.el")
+ (front-context-string . ";;; startup.el -")
+ (rear-context-string)
+ (position . 1))
+("p"
+ (filename . "")
+ (front-context-string . "lisp
+  drwxr-xr-")
+ (rear-context-string . "2K Dec  2 00:53 ")
+ (position . 2405))
+)
