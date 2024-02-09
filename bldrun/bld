@@ -28,7 +28,7 @@ touch ./.configure.done
 make -j$(nproc)
 make -j$(nproc) install
 )
-)
+) 2>&1|tee m4up.dir/bld.log
 dnl Local Variables:
 dnl mode                         : m4
 dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
