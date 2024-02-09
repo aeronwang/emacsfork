@@ -1,0 +1,19 @@
+m4ug.addremote(https://git.savannah.gnu.org/git/emacs.git,upstream)
+dnl Local Variables:
+dnl mode                         : m4
+dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
+dnl coding                       : iso-latin-1-unix
+dnl delete-trailing-whitespace   : t
+dnl delete-trailing-blank-lines  : t
+dnl comment-start                : "dnl "
+dnl eval                         : (m4bq 1)
+dnl eval: (setq post-save-enable nil)
+dnl eval: (setq post-save-cmdargs '("mfour 'm4postsave(%s, .currun.%s)(mfor=1)'" fa-curfile fa-curstem))
+dnl eval: (setq run-the-fileargs  '(eval-sexp (fileargsn 0 "gen" :1 "run" 2 "test" 3 "debug all" 4 "debug fns eg m4def")))
+dnl eval: (setq run-the-fileargsu '(eval-sexp (fileargsn 0 "gen"  1 "run" 2 "test" 3 "debug all" 4 "debug fns eg m4def")))
+dnl eval: (setq run-the-fileargs0 '("m4 m4 <(echo -n 'm4funcfg(bash.cmd,chkerr=)m4funcfg(bash.run,chkerr=)') %s" fa-curfile))
+dnl eval: (setq run-the-fileargs1 '("currun %s" fa-curfile))
+dnl eval: (setq run-the-fileargs2 '("diff %s.expected <(runfa1 %s 2>&1) && echo PASS || ! echo FAIL" fa-curfile fa-curfile))
+dnl eval: (setq run-the-fileargs3 '("m4 -daeq m4 <(echo m4traceon) %s" fa-curfile))
+dnl eval: (setq run-the-fileargs5 '("m4 -daeq m4 -t m4def -t m4d %s" fa-curfile))
+dnl End:
