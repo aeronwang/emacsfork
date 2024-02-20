@@ -25,10 +25,10 @@ dnl you del these 2 guard files will trigger/force rerun of autogen or configure
 m4ub.ise(./configure) || ./autogen.sh
 m4ub.ise(./.configure.done) || ./configure m4cfgopts
 touch ./.configure.done
-make -j$(nproc)
-make -j$(nproc) install
+m4ub.tit(make -j$(nproc))
+m4ub.tit(make -j$(nproc) install)
 )
-) 2>&1|tee m4up.dir/bld.log
+) 2>&1|gzip > m4up.dir/bld.log.gz
 dnl Local Variables:
 dnl mode                         : m4
 dnl eval                         : (hack-dir-local-variables-after-change-major-mode)
