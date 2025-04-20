@@ -104,4 +104,5 @@ inst
 
 .currun.*
 
-.git
+!.git
+.git.main.d
